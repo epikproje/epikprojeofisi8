@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="tr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Epik Proje Ofisi | Modern ve Estetik Mimari</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+    body { font-family: 'Montserrat', sans-serif; }
+
+    @keyframes pulse-slow {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0.4; }
+    }
+
+    .animate-pulse-slow {
+        animation: pulse-slow 2.5s ease-in-out infinite;
+    }
+</style>
+</head>
+<body class="bg-[#1c1d21] text-neutral-100 antialiased selection:bg-neutral-100 selection:text-neutral-900">
+
+    <header id="mainHeader" class="fixed top-0 left-0 w-full bg-[#1c1d21]/90 backdrop-blur-md z-40 border-b border-neutral-800 transition-transform duration-300 transform translate-y-0">
+        <div class="max-w-7xl mx-auto px-6 h-36 flex items-center justify-between">
+            <div class="flex items-center gap-4">
+                <img src="assets/logo_1.png" alt="Epik Proje Logosu" class="h-50 md:h-80 w-auto object-contain py-2">
+            </div>
+            
+            <nav class="hidden md:flex items-center space-x-8 text-xs font-semibold tracking-widest uppercase">
+                <a href="#" class="text-white transition-colors">ANA SAYFA</a>
+                <a href="#projeler" class="text-neutral-400 hover:text-white transition-colors">PROJELERİMİZ</a>
+                <a href="#hakkimizda" class="text-neutral-400 hover:text-white transition-colors">HAKKIMIZDA</a>
+                <button onclick="openContactDrawer()" class="text-neutral-400 hover:text-white transition-colors cursor-pointer">İLETİŞİM</button>
+            </nav>
+
+            <button onclick="toggleMobileMenu()" class="block md:hidden text-white p-2 focus:outline-none cursor-pointer" aria-label="Menüyü Aç">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+
+        <div id="mobileMenu" class="hidden md:hidden bg-[#1c1d21] border-b border-neutral-800 w-full px-6 py-4 space-y-4 shadow-lg absolute top-36 left-0 z-50">
+            <a href="#" onclick="toggleMobileMenu()" class="block text-sm font-semibold tracking-widest text-white py-2">ANA SAYFA</a>
+            <a href="#projeler" onclick="toggleMobileMenu()" class="block text-sm font-semibold tracking-widest text-neutral-400 hover:text-white py-2">PROJELERİMİZ</a>
+            <a href="#hakkimizda" onclick="toggleMobileMenu()" class="block text-sm font-semibold tracking-widest text-neutral-400 hover:text-white py-2">HAKKIMIZDA</a>
+            <button onclick="toggleMobileMenu(); openContactDrawer();" class="block w-full text-left text-sm font-semibold tracking-widest text-neutral-400 hover:text-white py-2 cursor-pointer">İLETİŞİM</button>
+        </div>
+    </header>
+
+    <section class="pt-40 min-h-screen flex items-center bg-[#141517] relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center py-12">
+            <div class="lg:col-span-5 z-10 space-y-6">
+                <h1 class="text-5xl md:text-6xl font-light text-neutral-400 leading-tight animate-pulse-slow">
+    Modern<br>
+    <span class="text-white font-bold">Estetik</span><br>
+    Projeler
+</h1>
+                <div class="w-12 h-[3px] bg-white my-4"></div>
+                <p class="text-neutral-400 font-light max-w-sm leading-relaxed text-sm">
+                    Estetiğin ve Güvenin Mimarı. Çizgilerin ötesinde yaşam alanları tasarlıyoruz.
+                </p>
+                <div class="mt-6 space-y-3">
+
+    <div class="flex items-center gap-3">
+        <div class="w-10 h-[2px] bg-white"></div>
+        <span class="text-sm tracking-[0.3em] uppercase text-white animate-pulse-slow">
+    Hizmetlerimiz
+</span>
+    </div>
+
+    <div class="h-10 overflow-hidden relative">
+        <div id="serviceSlider" class="absolute top-0 left-0 w-full transition-transform duration-500">
+
+            <div class="h-10 flex items-center text-neutral-400 text-lg">Mimari</div>
+            <div class="h-10 flex items-center text-neutral-400 text-lg">Statik</div>
+            <div class="h-10 flex items-center text-neutral-400 text-lg">Mekanik</div>
+            <div class="h-10 flex items-center text-neutral-400 text-lg">Elektrik</div>
+            <div class="h-10 flex items-center text-neutral-400 text-lg">Harita</div>
+            <div class="h-10 flex items-center text-neutral-400 text-lg">Jeoloji / Jeofizik</div>
+
+        </div>
+    </div>
+
+</div>
+                <div class="pt-4">
+                    <a href="#projeler" class="inline-flex items-center text-xs tracking-widest uppercase font-semibold border-b border-white pb-2 hover:text-neutral-400 hover:border-neutral-400 transition-all">
+                        PROJELERİ KEŞFET →
+                    </a>
+                </div>
+            </div>
+            
+            <div class="absolute inset-0 z-0">
+    <img src="assets/anasayfa_1.png" 
+         class="w-full h-full object-cover blur-md opacity-20 grayscale">
+</div>
+        </div>
+    </section>
+
+    <section id="projeler" class="py-24 bg-[#1c1d21] border-t border-b border-neutral-900">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16 space-y-2">
+                <h2 class="text-2xl font-light tracking-[0.2em] text-white uppercase">PROJELERİMİZ</h2>
+                <div class="w-8 h-[2px] bg-white mx-auto"></div>
+            </div>
+
+            <div class="space-y-8">
+                <div class="bg-[#141517] border border-neutral-800/60 p-6 md:p-8 hover:border-neutral-700 transition-all duration-300">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between border-b border-neutral-800 pb-4 gap-4">
+                        <div class="flex items-center gap-4">
+                            <span class="text-neutral-500 font-light text-xl">→</span>
+                            <h3 class="text-xl font-bold tracking-wide text-white">ERKILIÇ İNŞAAT</h3>
+                        </div>
+                        <button onclick="toggleProjectPanel('erkilic')" class="text-xs font-semibold tracking-widest uppercase border border-white px-6 py-2.5 hover:bg-white hover:text-black transition-all cursor-pointer">PROJEYİ GÖRÜNTÜLE</button>
+                    </div>
+                    <div class="flex flex-wrap gap-4 md:gap-8 pt-4 text-xs font-medium text-neutral-400 uppercase tracking-wider">
+                        <span><strong>Proje:</strong> Konut Tasarımı</span>
+                        <span><strong>Bölge:</strong> Kayseri</span>
+                        <span><strong>Yıl:</strong> 2026</span>
+                    </div>
+                    <div id="panel-erkilic" class="hidden pt-8 mt-6 border-t border-dashed border-neutral-800">
+                        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                            <div class="space-y-3 text-sm border-r border-neutral-800 pr-4">
+                                <div class="flex justify-between py-2 border-b border-neutral-900">
+                                    <span class="text-neutral-400">Mimar</span><strong class="font-semibold text-white">Hasan Berkay Acar</strong>
+                                </div>
+                                <div class="flex justify-between py-2 border-b border-neutral-900">
+                                    <span class="text-neutral-400">İnş. Mühendisi</span><strong class="font-semibold text-white">Furkan Şahan</strong>
+                                </div>
+                            </div>
+                            <div class="lg:col-span-2 space-y-4">
+                                <div class="w-full h-80 bg-neutral-900 bg-cover bg-center" style="background-image: url('assets/erkilic_1.jpg');"></div>
+                                <div class="grid grid-cols-3 gap-3">
+                                    <div class="h-20 bg-neutral-900 bg-cover bg-center" style="background-image: url('assets/erkilic_2.jpg');"></div>
+                                    <div class="h-20 bg-neutral-900 bg-cover bg-center" style="background-image: url('assets/erkilic_3.jpg');"></div>
+                                    <div class="h-20 bg-neutral-900 bg-cover bg-center" style="background-image: url('assets/erkilic_4.jpg');"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-[#141517] border border-neutral-800/60 p-6 md:p-8 hover:border-neutral-700 transition-all duration-300">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between border-b border-neutral-800 pb-4 gap-4">
+                        <div class="flex items-center gap-4">
+                            <span class="text-neutral-500 font-light text-xl">→</span>
+                            <h3 class="text-xl font-bold tracking-wide text-white">DURAN HARMANBAŞI İNŞAAT</h3>
+                        </div>
+                        <button onclick="toggleProjectPanel('duran')" class="text-xs font-semibold tracking-widest uppercase border border-white px-6 py-2.5 hover:bg-white hover:text-black transition-all cursor-pointer">PROJEYİ GÖRÜNTÜLE</button>
+                    </div>
+                    <div class="flex flex-wrap gap-4 md:gap-8 pt-4 text-xs font-medium text-neutral-400 uppercase tracking-wider">
+                        <span><strong>Proje:</strong> A Blok / Yavaş Şehir Çarşısı</span>
+                        <span><strong>Bölge:</strong> Kayseri</span>
+                        <span><strong>Yıl:</strong> 2026</span>
+                    </div>
+                    <div id="panel-duran" class="hidden pt-8 mt-6 border-t border-dashed border-neutral-800">
+                        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                            <div class="space-y-3 text-sm border-r border-neutral-800 pr-4">
+                                <div class="flex justify-between py-2 border-b border-neutral-900">
+                                    <span class="text-neutral-400">Mimar</span><strong class="font-semibold text-white">Hasan Berkay Acar</strong>
+                                </div>
+                                <div class="flex justify-between py-2 border-b border-neutral-900">
+                                    <span class="text-neutral-400">İnş. Mühendisi</span><strong class="font-semibold text-white">Furkan Şahan</strong>
+                                </div>
+                            </div>
+                            <div class="lg:col-span-2 space-y-4">
+                                <div class="w-full h-80 bg-neutral-900 bg-cover bg-center" style="background-image: url('assets/duran_1.jpg');"></div>
+                                <div class="grid grid-cols-2 gap-3">
+                                    <div class="h-20 bg-neutral-900 bg-cover bg-center" style="background-image: url('assets/duran_2.jpg');"></div>
+                                    <div class="h-20 bg-neutral-900 bg-cover bg-center" style="background-image: url('assets/duran_3.jpg');"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-[#141517] border border-neutral-800/60 p-6 md:p-8 hover:border-neutral-700 transition-all duration-300">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between border-b border-neutral-800 pb-4 gap-4">
+                        <div class="flex items-center gap-4">
+                            <span class="text-neutral-500 font-light text-xl">→</span>
+                            <h3 class="text-xl font-bold tracking-wide text-white">ERYAPI İNŞAAT</h3>
+                        </div>
+                        <button onclick="toggleProjectPanel('eryapi')" class="text-xs font-semibold tracking-widest uppercase border border-white px-6 py-2.5 hover:bg-white hover:text-black transition-all cursor-pointer">PROJEYİ GÖRÜNTÜLE</button>
+                    </div>
+                    <div class="flex flex-wrap gap-4 md:gap-8 pt-4 text-xs font-medium text-neutral-400 uppercase tracking-wider">
+                        <span><strong>Proje:</strong> Prestij Park Konutları</span>
+                        <span><strong>Bölge:</strong> Kayseri</span>
+                        <span><strong>Yıl:</strong> 2026</span>
+                    </div>
+                    <div id="panel-eryapi" class="hidden pt-8 mt-6 border-t border-dashed border-neutral-800">
+                        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                            <div class="space-y-3 text-sm border-r border-neutral-800 pr-4">
+                                <div class="flex justify-between py-2 border-b border-neutral-900">
+                                    <span class="text-neutral-400">Mimar</span><strong class="font-semibold text-white">Hasan Berkay Acar</strong>
+                                </div>
+                                <div class="flex justify-between py-2 border-b border-neutral-900">
+                                    <span class="text-neutral-400">İnş. Mühendisi</span><strong class="font-semibold text-white">Furkan Şahan</strong>
+                                </div>
+                            </div>
+                            <div class="lg:col-span-2 space-y-4">
+                                <div class="w-full h-80 bg-neutral-900 bg-cover bg-center" style="background-image: url('assets/eryapi_1.jpg');"></div>
+                                <div class="grid grid-cols-4 gap-3">
+                                    <div class="h-20 bg-neutral-900 bg-cover bg-center" style="background-image: url('assets/eryapi_2.jpg');"></div>
+                                    <div class="h-20 bg-neutral-900 bg-cover bg-center" style="background-image: url('assets/eryapi_3.jpg');"></div>
+                                    <div class="h-20 bg-neutral-900 bg-cover bg-center" style="background-image: url('assets/eryapi_4.jpg');"></div>
+                                    <div class="h-20 bg-neutral-900 bg-cover bg-center" style="background-image: url('assets/eryapi_5.jpg');"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="hakkimizda" class="py-24 bg-[#141517]">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12">
+            <div class="lg:col-span-7 space-y-6">
+                <h2 class="text-2xl font-light tracking-[0.2em] text-white uppercase">HAKKIMIZDA</h2>
+                <h3 class="text-lg font-semibold text-neutral-300">Estetiğin ve Güvenin Mimarı: Epik Proje Ofisi</h3>
+                <p class="text-neutral-400 font-light leading-relaxed text-justify text-sm">
+                    Epik Proje Ofisi olarak, mimarlık ve mühendislik dünyasında 6 yıllık köklü tecrübemizle geleceğin yaşam alanlarını bugünden inşa ediyoruz. Her projeyi estetik, fonksiyonellik ve mühendislik dehasının birleştiği birer sanat eseri olarak gördük.
+                </p>
+                <p class="text-neutral-400 font-light leading-relaxed text-justify text-sm">
+                    Kayseri merkezli ofisimizde, alanında uzman mimar ve mühendis kadromuzla; kentsel dinamiklere uyumlu, modern mimari trendleri yakalayan ve insan yaşamına değer katan projelere imza atıyoruz. Referanslarımızla, sektördeki güvenilir duruşumuzu pekiştiriyoruz.
+                </p>
+                <div class="p-5 bg-[#1c1d21] border-l-4 border-white mt-6">
+                    <h4 class="font-bold text-xs uppercase tracking-wider mb-2 text-white">Misyonumuz</h4>
+                    <p class="text-xs text-neutral-400 font-medium leading-relaxed">
+                        Modern mimarinin estetik çizgilerini, en üst düzey mühendislik çözümleri ve sarsılmaz bir güven bağıyla harmanlamak; çevreye saygılı, sürdürülebilir nitelikli yaşam alanları üretmektir.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="lg:col-span-5 space-y-4">
+                <h3 class="text-xs font-bold tracking-widest text-white uppercase">OFİS KONUMUMUZ</h3>
+                <p class="text-xs text-neutral-400 font-medium">Sahabiye, Ahmet Paşa Cd., 38010 Kocasinan/Kayseri</p>
+                <div class="border border-neutral-800 p-2 bg-[#1c1d21] shadow-sm">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3113.144415842848!2d35.4852!3d38.7248!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzjCsDQzJzI5LjMiTiAzNcKwMjknMDYuNyJF!5e0!3m2!1str!2str!4v1715800000000!5m2!1str!2str" 
+                        width="100%" 
+                        height="320" 
+                        style="border:0; filter: invert(90%) hue-rotate(180deg);" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-[#0b0c10] text-neutral-600 py-8 text-center text-xs font-light border-t border-neutral-900">
+        <p>© 2026 Epik Proje Ofisi. Tüm Hakları Saklıdır.</p>
+    </footer>
+
+    <div id="drawerOverlay" onclick="closeContactDrawer()" class="fixed top-0 left-0 w-full h-full bg-black/60 backdrop-blur-[2px] z-50 opacity-0 pointer-events-none transition-all duration-300"></div>
+    <div id="drawerContainer" class="fixed top-0 -right-full w-full md:w-1/2 h-full bg-[#141517] text-white z-50 shadow-2xl transition-all duration-300 cubic-bezier(0.16, 1, 0.3, 1) p-10 overflow-y-auto border-l border-neutral-800">
+        <button onclick="closeContactDrawer()" class="absolute top-6 right-8 text-white text-4xl font-light hover:text-neutral-400 transition-colors cursor-pointer">×</button>
+        
+        <div class="mt-8 space-y-12">
+            <h2 class="text-3xl font-light tracking-[0.15em] border-b border-neutral-800 pb-4">İLETİŞİM</h2>
+            
+            <div class="flex flex-col gap-6">
+                <div class="bg-[#1c1d21] border border-neutral-800/60 p-6 rounded-none">
+                    <span class="text-[10px] font-bold tracking-widest text-neutral-400 block mb-1">MİMAR</span>
+                    <h3 class="text-lg font-semibold tracking-wide">Hasan Berkay Acar</h3>
+                    <a href="tel:05075835040" class="text-sm font-medium text-neutral-400 hover:text-white transition-colors mt-2 inline-block">0507 583 50 40</a>
+                </div>
+                
+                <div class="bg-[#1c1d21] border border-neutral-800/60 p-6 rounded-none">
+                    <span class="text-[10px] font-bold tracking-widest text-neutral-400 block mb-1">İNŞAAT MÜHENDİSİ</span>
+                    <h3 class="text-lg font-semibold tracking-wide">Furkan Şahan</h3>
+                    <a href="tel:05515988893" class="text-sm font-medium text-neutral-400 hover:text-white transition-colors mt-2 inline-block">0551 598 88 93</a>
+                </div>
+            </div>
+            
+            <div class="border-t border-neutral-800 pt-8 space-y-6">
+                <div class="space-y-2">
+                    <h4 class="text-xs text-neutral-500 tracking-wider font-semibold">OFİS ADRESİ</h4>
+                    <p class="text-sm font-light text-neutral-300">Sahabiye, Ahmet Paşa Cd., 38010 Kocasinan/Kayseri</p>
+                </div>
+                
+                <div class="space-y-3">
+                    <h4 class="text-xs text-neutral-500 tracking-wider font-semibold">SOSYAL MEDYA</h4>
+                    <a href="https://www.instagram.com/epikprojeofisi/?hl=tr" target="_blank" class="inline-flex items-center gap-3 text-xs font-bold tracking-wide text-white bg-neutral-800 hover:bg-neutral-700 border border-neutral-700 px-6 py-3 transition-colors">
+                        <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+                        </svg>
+                        INSTAGRAM @epikprojeofisi
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Akıllı Header - Telefonlar ve Masaüstü Dahil Tüm Cihazlarda Aktif
+        let lastScrollTop = 0;
+        const header = document.getElementById('mainHeader');
+        let isMobileMenuOpen = false;
+        
+        window.addEventListener('scroll', function() {
+            // Eğer telefon menüsü açıksa scroll yaparken header gizlenmesin
+            if (isMobileMenuOpen) return;
+
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            
+            // Yukarı kaydırılıyorsa veya en tepedeysek göster
+            if (scrollTop < lastScrollTop || scrollTop <= 0) {
+                header.classList.remove('-translate-y-full');
+                header.classList.add('translate-y-0');
+            } else {
+                // Aşağı kaydırılıyorsa gizle (header yüksekliği h-36 yani 144px olduğundan 144 kontrolü yapıyoruz)
+                if (scrollTop > 144) { 
+                    header.classList.remove('translate-y-0');
+                    header.classList.add('-translate-y-full');
+                }
+            }
+            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+        });
+
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+            // Menü durumunu kaydırma kontrolü için kaydet
+            isMobileMenuOpen = !menu.classList.contains('hidden');
+        }
+
+        function openContactDrawer() {
+            const container = document.getElementById('drawerContainer');
+            const overlay = document.getElementById('drawerOverlay');
+            container.style.right = '0';
+            overlay.style.opacity = '1';
+            overlay.style.pointerEvents = 'auto';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeContactDrawer() {
+            const container = document.getElementById('drawerContainer');
+            const overlay = document.getElementById('drawerOverlay');
+            container.style.right = '-100%';
+            overlay.style.opacity = '0';
+            overlay.style.pointerEvents = 'none';
+            document.body.style.overflow = '';
+        }
+
+        function toggleProjectPanel(id) {
+            const panel = document.getElementById(`panel-${id}`);
+            panel.classList.toggle('hidden');
+        }
+    </script>
+    <script>
+let index = 0;
+
+setInterval(() => {
+    const slider = document.getElementById("serviceSlider");
+
+    index++;
+    if (index > 5) index = 0;
+
+    slider.style.transform = `translateY(-${index * 40}px)`;
+}, 2000);
+</script>
+    
+</body>
+</html>
